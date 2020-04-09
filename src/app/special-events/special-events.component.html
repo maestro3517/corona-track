@@ -1,0 +1,22 @@
+<div class="text-center col-md-4 p-5 m-5" style="padding-bottom: 10px;"
+    *ngFor='let event of eventsData'>
+    <mat-card>
+
+        <mat-card-title>
+            {{event.name}}
+        </mat-card-title>
+
+        <mat-card-content>
+            <p>
+                {{event.description}}
+            </p>
+            <button mat-raised-button class="btn btn-primary">
+                Buy Tickets
+            </button>
+        </mat-card-content>
+        <mat-card-footer class="text-muted">
+            {{event.date | date:'shortDate'}}
+        </mat-card-footer>
+    </mat-card>
+
+</div>

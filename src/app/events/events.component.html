@@ -1,0 +1,29 @@
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
+
+<div class="mx-auto col-md-4 text-center" style="padding-bottom: 10px; " *ngFor='let event of eventsData'>
+    <mat-card class=''>
+        <div class="">
+            <h1>
+                {{event.name}}
+            </h1>
+        </div>
+        <div>
+            <mat-card-content>
+                <p>
+                    {{event.description}}
+                </p>
+                <button mat-raised-button class="btn btn-success">
+                    Buy Tickets
+                </button>
+            </mat-card-content>
+            <mat-card-footer class="text-muted">
+                {{event.date | date:'shortDate'}}
+            </mat-card-footer>
+        </div>
+
+    </mat-card>
+
+</div>
